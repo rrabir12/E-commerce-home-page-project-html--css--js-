@@ -124,7 +124,7 @@ justify-content: center;
   margin-top: 100px;
   background-color: rgb(227, 198, 123);
   border-radius: 50%;
-  
+  cursor: pointer;
 }
 #featured .card .detail{
   display: flex;
@@ -132,6 +132,9 @@ justify-content: center;
 #featured .fa-cart-plus{
   margin-left: 8px;
   color: rgb(198, 146, 15);
+}
+#featured .card{
+  cursor: pointer;
 }
 
 /* service */
@@ -162,7 +165,10 @@ color: white;
   margin-top: 100px;
   background-color: rgb(227, 198, 123);
   border-radius: 50%;
-  
+  cursor: pointer;
+}
+#new-arrivals .card{
+  cursor: pointer;
 }
 #new-arrivals img{
   height: 200px;
