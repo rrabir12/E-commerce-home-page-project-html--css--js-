@@ -111,6 +111,12 @@ justify-content: center;
 }
 
 /* featured */
+.card{
+  transition: 0.3s ease-in-out;
+}
+.card:hover{
+  transform: scale(1.05);
+}
 #featured img{
   height: 200px;
   width: 263px;
@@ -223,4 +229,32 @@ footer iframe{
   margin-top: 20px;
   height: 150px;
   width: 300px;
+}
+footer hr{
+  height: unset;
+  width: unset;
+  color: rgb(76, 75, 75);
+}
+
+#backToTop{
+  position: fixed; 
+  bottom: 30px; 
+  right: 30px; 
+  display: none;
+  color: #33423c;
+  font-size: large;
+  /* background-color: #465b52; */
+}
+
+.up-arrow {
+  animation: blink 1.05s infinite; /* Apply the blinking animation */
+}
+
+@keyframes blink {
+  0%, 100% {
+      opacity: 1; /* Fully visible */
+  }
+  50% {
+      opacity: 0; /* Fully hidden */
+  }
 }
