@@ -55,20 +55,30 @@ p{
     color: rgb(124, 124, 124);
     padding: 0 15px;
 }
-.navbar .container .nav .nav-item .nav-link:hover,
-.navbar .container .nav .nav-item .nav-link.active
+.navbar .container .nav .nav-item .nav-link:hover
+/* .navbar .container .nav .nav-item .nav-link.active */
 {
   color: #088178;
+  /* background-position: left; */
 }
-.navbar .container .nav .nav-item .nav-link:hover::after,
-.navbar .container .nav .nav-item .nav-link.active::after{
+/* .navbar .container .nav .nav-item .nav-link:hover::before, */
+.navbar .container .nav .nav-item .nav-link::before{
   content: "";
   height: 2px;
-  width: 40%;
+  width: 50%;
   position: absolute;
   background-color: #088178;
+  /* background: linear-gradient(to left, #088178 50%, rgb(168, 68, 68) 50%) right;
+  background-size: 200%; */
+  transition: 0.4s ease-in-out;
+  visibility: hidden;
+  transform: scale(0);
   bottom: -4px;
   left:16px;
+}
+.navbar .container .nav .nav-item .nav-link:hover::before{
+visibility: visible;
+transform: scale(1);
 }
 @media only screen and (max-width:990px){
   .nav{
@@ -80,6 +90,7 @@ p{
       align-items: flex-start;
       text-align: left;
   }
+
 }
 
 /* hero section */
@@ -95,6 +106,11 @@ align-items: flex-start;
 justify-content: center;
 
 }
+/* @media only screen and (max-width: 490px){ 
+  #hero{
+   background-position-x: 10%;
+  }
+} */
 #hero h1{
   color: #088178;
 }
@@ -113,9 +129,11 @@ justify-content: center;
 /* featured */
 .card{
   transition: 0.3s ease-in-out;
+  transition-behavior: smooth;
 }
 .card:hover{
   transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 #featured img{
   height: 200px;
@@ -157,8 +175,16 @@ color: white;
   color: red;
 }
 #service button{
-  background-color: rgb(24, 117, 141);
+  /* background-color: rgb(24, 117, 141); */
   color: white;
+  background: linear-gradient(to left, rgb(205, 82, 68) 50%, rgb(100, 174, 198) 50%) right;
+    background-size: 200%;
+    transition: .5s ease-in-out;
+}
+#service button:hover{
+  /* background-color: rgb(128, 40, 16); */
+  color: #000;
+  background-position: left;
 }
 
 /* new arrivals */
@@ -243,7 +269,6 @@ footer hr{
   display: none;
   color: #33423c;
   font-size: large;
-  /* background-color: #465b52; */
 }
 
 .up-arrow {
